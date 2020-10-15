@@ -7,7 +7,7 @@ ENV GITHUB_URL="https://github.com/rathena/rathena.git"
 
 RUN mkdir -p /opt/rAthena \
     && apk update \
-    && apk add --no-cache git make linux-headers gcc g++ mariadb-dev mariadb-client-libs zlib-dev pcre-dev libressl-dev pcre libstdc++ nano dos2unix mysql-client bind-tools \
+    && apk add --no-cache git make gcc g++ mariadb-dev mariadb-client-libs zlib-dev pcre-dev libressl-dev pcre libstdc++ nano dos2unix mysql-client bind-tools linux-headers \
     && git clone ${GITHUB_URL} /opt/rAthena \
     && cd /opt/rAthena \
     && if [ ${PACKET_OBFUSCATION} -ne 1 ]; then sed -i "s|#define PACKET_OBFUSCATION|//#define PACKET_OBFUSCATION|g" /opt/rAthena/src/config/packets.hpp; fi \
@@ -16,7 +16,7 @@ RUN mkdir -p /opt/rAthena \
     && make clean \
     && make server \
     && chmod a+x login-server && chmod a+x char-server && chmod a+x map-server \
-    && apk del git make linux-headers gcc g++ mariadb-dev zlib-dev pcre-dev libressl-dev
+    && apk del git make gcc g++ mariadb-dev zlib-dev pcre-dev libressl-dev
 
 
 COPY scripts/entrypoint.sh /usr/local/bin/

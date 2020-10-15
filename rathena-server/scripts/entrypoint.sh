@@ -133,43 +133,8 @@ setup_config () {
   if ! [ -z "${SERVER_START_ITEMS_DORAM}" ]; then echo -e "start_items_doram: ${SERVER_START_ITEMS_DORAM}" >> /opt/rAthena/conf/import/char_conf.txt; fi
   if ! [ -z "${SERVER_PINCODE_ENABLED}" ]; then echo -e "pincode_enabled: ${SERVER_PINCODE_ENABLED}" >> /opt/rAthena/conf/import/char_conf.txt; fi
 
-  if ! [ -z "${SERVER_LOGIN_ALLOWED_REGS}" ]; then echo -e "allowed_regs: ${SERVER_LOGIN_ALLOWED_REGS}" >> /opt/rAthena/conf/import/login_conf.txt; fi
-  if ! [ -z "${SERVER_LOGIN_TIME_ALLOWED}" ]; then echo -e "time_allowed: ${SERVER_LOGIN_TIME_ALLOWED}" >> /opt/rAthena/conf/import/login_conf.txt; fi
   if ! [ -z "${SERVER_LOGIN_MD5_PASSWD}" ]; then echo -e "use_MD5_passwords: ${SERVER_LOGIN_MD5_PASSWD}" >> /opt/rAthena/conf/import/login_conf.txt; fi
-
-  echo "Applying server configs..."
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_COMMON}" ]; then echo -e "item_rate_common: ${CONFIG_DROPS_ITEM_RATE_COMMON}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_COMMON_BOSS}" ]; then echo -e "item_rate_common_boss: ${CONFIG_DROPS_ITEM_RATE_COMMON_BOSS}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_COMMON_MVP}" ]; then echo -e "item_rate_common_mvp: ${CONFIG_DROPS_ITEM_RATE_COMMON_MVP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_HEAL}" ]; then echo -e "item_rate_heal: ${CONFIG_DROPS_ITEM_RATE_HEAL}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_HEAL_BOSS}" ]; then echo -e "item_rate_heal_boss: ${CONFIG_DROPS_ITEM_RATE_HEAL_BOSS}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_HEAL_MVP}" ]; then echo -e "item_rate_heal_mvp: ${CONFIG_DROPS_ITEM_RATE_HEAL_MVP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_USE}" ]; then echo -e "item_rate_use: ${CONFIG_DROPS_ITEM_RATE_USE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_USE_BOSS}" ]; then echo -e "item_rate_boss: ${CONFIG_DROPS_ITEM_RATE_USE_BOSS}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_USE_MVP}" ]; then echo -e "item_rate_use_mvp: ${CONFIG_DROPS_ITEM_RATE_USE_MVP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_EQUIP}" ]; then echo -e "item_rate_equip: ${CONFIG_DROPS_ITEM_RATE_EQUIP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_EQUIP_BOSS}" ]; then echo -e "item_rate_equip_boss: ${CONFIG_DROPS_ITEM_RATE_EQUIP_BOSS}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_EQUIP_MVP}" ]; then echo -e "item_rate_equip_mvp: ${CONFIG_DROPS_ITEM_RATE_EQUIP_MVP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_CARD}" ]; then echo -e "item_rate_card: ${CONFIG_DROPS_ITEM_RATE_CARD}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_CARD_BOSS}" ]; then echo -e "item_rate_card_boss: ${CONFIG_DROPS_ITEM_RATE_CARD_BOSS}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_CARD_MVP}" ]; then echo -e "item_rate_card_mvp: ${CONFIG_DROPS_ITEM_RATE_CARD_MVP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_MVP}" ]; then echo -e "item_rate_mvp: ${CONFIG_DROPS_ITEM_RATE_MVP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_ADDDROP}" ]; then echo -e "item_rate_adddrop: ${CONFIG_DROPS_ITEM_RATE_ADDDROP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_DROPS_ITEM_RATE_TREASURE}" ]; then echo -e "item_rate_treasure: ${CONFIG_DROPS_ITEM_RATE_TREASURE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_BASE_EXP_RATE}" ]; then echo -e "base_exp_rate: ${CONFIG_EXP_BASE_EXP_RATE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_JOB_EXP_RATE}" ]; then echo -e "job_exp_rate: ${CONFIG_EXP_JOB_EXP_RATE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_MULTI_LEVEL_UP}" ]; then echo -e "multi_level_up: ${CONFIG_EXP_MULTI_LEVEL_UP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_MVP_EXP_RATE}" ]; then echo -e "mvp_exp_rate: ${CONFIG_EXP_MVP_EXP_RATE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_QUEST_EXP_RATE}" ]; then echo -e "quest_exp_rate: ${CONFIG_EXP_QUEST_EXP_RATE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_HEAL_EXP}" ]; then echo -e "heal_exp: ${CONFIG_EXP_HEAL_EXP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_RESURRECTION_EXP}" ]; then echo -e "resurrection_exp: ${CONFIG_EXP_RESURRECTION_EXP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_SHOP_EXP}" ]; then echo -e "shop_exp: ${CONFIG_EXP_SHOP_EXP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_PVP_EXP}" ]; then echo -e "pvp_exp: ${CONFIG_EXP_PVP_EXP}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_DEATH_PENALTY_TYPE}" ]; then echo -e "death_penalty_type: ${CONFIG_EXP_DEATH_PENALTY_TYPE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_DEATH_PENALTY_BASE}" ]; then echo -e "death_penalty_base: ${CONFIG_EXP_DEATH_PENALTY_BASE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_DEATH_PENALTY_JOB}" ]; then echo -e "death_penalty_job: ${CONFIG_EXP_DEATH_PENALTY_JOB}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_ZENY_PENALTY}" ]; then echo -e "zeny_penalty: ${CONFIG_EXP_ZENY_PENALTY}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
-  if ! [ -z "${CONFIG_EXP_DISP_EXPERIENCE}" ]; then echo -e "disp_experience: ${CONFIG_EXP_DISP_EXPERIENCE}" >> /opt/rAthena/conf/import/battle_conf.txt; fi
+  if ! [ -z "${SERVER_LOGIN_NEW_ACCOUNT}" ]; then echo -e "new_account: ${SERVER_LOGIN_NEW_ACCOUNT}" >> /opt/rAthena/conf/import/login_conf.txt; fi
 }
 
 cd /opt/rAthena
