@@ -2,7 +2,7 @@ FROM alpine:3.7
 LABEL maintainer="Christian Bargmann <chris@cbrgm.net>"
 
 ENV PACKET_OBFUSCATION=0
-ENV PACKETVER=20180620
+ENV PACKETVER=20190306
 ENV GITHUB_URL="https://github.com/rathena/rathena.git"
 
 RUN mkdir -p /opt/rAthena \

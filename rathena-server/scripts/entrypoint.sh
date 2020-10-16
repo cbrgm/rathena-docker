@@ -95,7 +95,6 @@ setup_mysql_config () {
     # edit connection user credentials
     mysql -u${MYSQL_USER} -p${MYSQL_PWD} -h ${MYSQL_HOST} -D${MYSQL_DB} -e "UPDATE login SET userid = \"${SERVER_INTERSRV_USERID}\", user_pass = \"${SERVER_INTERSRV_PASSWD}\" WHERE account_id = 1;"
 
-    2000000
     # add gamemaster account
     mysql -u${MYSQL_USER} -p${MYSQL_PWD} -h ${MYSQL_HOST} -D${MYSQL_DB} -e "INSERT INTO login (account_id, userid, user_pass, sex, email, group_id, state, unban_time, expiration_time, logincount, lastlogin, last_ip, birthdate, character_slots, pincode, pincode_change, vip_time, old_group) VALUES ('2000000', '${SERVER_GM_USER}', '${SERVER_GM_PASSWD}', 'M', 'athena@athena.com', '99', '0', '0', '0', '0', NULL, '', NULL, '0', '', '0', '0', '0');"
   fi
@@ -132,6 +131,7 @@ setup_config () {
   if ! [ -z "${SERVER_START_ITEMS}" ]; then echo -e "start_items: ${SERVER_START_ITEMS}" >> /opt/rAthena/conf/import/char_conf.txt; fi
   if ! [ -z "${SERVER_START_ITEMS_DORAM}" ]; then echo -e "start_items_doram: ${SERVER_START_ITEMS_DORAM}" >> /opt/rAthena/conf/import/char_conf.txt; fi
   if ! [ -z "${SERVER_PINCODE_ENABLED}" ]; then echo -e "pincode_enabled: ${SERVER_PINCODE_ENABLED}" >> /opt/rAthena/conf/import/char_conf.txt; fi
+  if ! [ -z "${SERVER_ALLOWED_JOB_FLAG}" ]; then echo -e "allowed_job_flag: ${SERVER_ALLOWED_JOB_FLAG}" >> /opt/rAthena/conf/import/char_conf.txt; fi
 
   if ! [ -z "${SERVER_LOGIN_MD5_PASSWD}" ]; then echo -e "use_MD5_passwords: ${SERVER_LOGIN_MD5_PASSWD}" >> /opt/rAthena/conf/import/login_conf.txt; fi
   if ! [ -z "${SERVER_LOGIN_NEW_ACCOUNT}" ]; then echo -e "new_account: ${SERVER_LOGIN_NEW_ACCOUNT}" >> /opt/rAthena/conf/import/login_conf.txt; fi
