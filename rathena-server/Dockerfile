@@ -18,7 +18,10 @@ RUN mkdir -p /opt/rAthena \
     && make server \
     && make tools \
     && chmod a+x yaml2sql \
-    && rm sql-files/mob_db_re.sql sql-files/item_db_re_etc.sql sql-files/item_db_re_equip.sql sql-files/item_db_re_usable.sql \
+    && rm sql-files/mob_db_re.sql \
+        sql-files/item_db_re_etc.sql \
+        sql-files/item_db_re_equip.sql \
+        sql-files/item_db_re_usable.sql \
     && yes | ./yaml2sql && yes | ./yaml2sql \
     && chmod a+x login-server && chmod a+x char-server && chmod a+x map-server \
     && apk del git make gcc g++ mariadb-dev zlib-dev pcre-dev libressl-dev
