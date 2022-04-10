@@ -330,7 +330,7 @@ chatTitleOversize 0
 shopTitleOversize 0
 buyerShopTitleOversize 0
 
-sleepTime 10000
+sleepTime 5000
 
 ignoreAll 0
 itemHistory 0
@@ -443,7 +443,6 @@ pet_return 20
 
 ## custom
 attackSkillSlot Bash {
-   lvl 10
    dist 1.5
    sp > 10
    aggressives
@@ -455,7 +454,6 @@ attackSkillSlot Bash {
 }
 
 useSelf_skill Magnum Break {
-    lvl 10
     dist 1.5
     sp > 30%
     aggressives >= 3
@@ -464,7 +462,6 @@ useSelf_skill Magnum Break {
 }
 
 useSelf_skill Endure {
-   lvl 10
    sp > 10%
    whenStatusInactive Endure
         onAction attack
@@ -473,7 +470,6 @@ useSelf_skill Endure {
 }
 
 attackSkillSlot Provoke{
-   lvl 10
    sp >10
    monsters
    maxUses 1
@@ -483,8 +479,6 @@ attackSkillSlot Provoke{
 ## custom end
 
 attackSkillSlot {
-	lvl 10
-	dist 1.5
 	maxCastTime 0
 	minCastTime 0
 	hp
@@ -571,7 +565,6 @@ doCommand {
 }
 
 useSelf_skill {
-	lvl 10
 	maxCastTime 0
 	minCastTime 0
 	hp
@@ -604,7 +597,6 @@ useSelf_skill_smartHeal 1
 partySkillDistance 0..8
 
 partySkill {
-	lvl 10
 	dist 3
 	maxCastTime 0
 	minCastTime 0
@@ -769,47 +761,8 @@ useSelf_item Meat,Apple,Banana,Sweet Potatoe,Carrot,Red Herb,Monster's Feed,Novi
 #	disabled 0
 #}
 
-sellAuto 1
-# sellAuto_npc izlude_in 115 61
-sellAuto_npc payon 159 96
-sellAuto_standpoint
-sellAuto_distance 5
-sellAuto_npc_steps s
-
-storageAuto 1
-# storageAuto_npc izlude 134 88
-# storageAuto_npc morroc 156 97
-storageAuto_npc payon 181 104
-storageAuto_standpoint
-storageAuto_distance 9
-storageAuto_npc_type 1
-storageAuto_npc_steps
-storageAuto_password
-storageEncryptKey
-storageAuto_keepOpen 0
-storageAuto_useChatCommand
-storageAuto_useItem 0
-storageAuto_useItem_item
-storageAuto_notAfterDeath
-relogAfterStorage 0
-minStorageZeny 50
-
 npcTimeResponse
 npcWrongStepsMethod 0
-
-getAuto Fly Wing {
-	minAmount
-	maxAmount 20
-	passive
-	disabled 0
-}
-
-getAuto {
-	minAmount
-	maxAmount
-	passive
-	disabled 0
-}
 
 ######## Debugging options; only useful for developers ########
 

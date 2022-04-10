@@ -444,7 +444,6 @@ pet_return 20
 
 ## custom
 useSelf_skill Blessing {
- lvl 10
  sp > 5%
  whenStatusInactive Blessing
  stopWhenHit 1
@@ -453,7 +452,6 @@ useSelf_skill Blessing {
 }
 
 useSelf_skill Increase Agility {
- lvl 10
  sp > 10%
  whenStatusInactive Increase Agility
  stopWhenHit 1
@@ -462,7 +460,6 @@ useSelf_skill Increase Agility {
 }
 
 useSelf_skill Kyrie Eleison {
- lvl 10
  sp > 10%
  whenStatusInactive Kyrie Eleison
  stopWhenHit 1
@@ -471,7 +468,6 @@ useSelf_skill Kyrie Eleison {
 }
 
 useSelf_skill Angelus {
- lvl 10
  sp > 10%
  whenStatusInactive Angelus
  stopWhenHit 1
@@ -480,7 +476,6 @@ useSelf_skill Angelus {
 }
 
 useSelf_skill Magnificat {
- lvl 5
  sp > 10%
  whenStatusInactive Magnificat
  stopWhenHit 1
@@ -489,7 +484,6 @@ useSelf_skill Magnificat {
 }
 
 useSelf_skill Gloria {
- lvl 5
  sp > 10%
  whenStatusInactive Gloria
  notWhileSitting 1
@@ -497,7 +491,6 @@ useSelf_skill Gloria {
 }
 
 useSelf_skill Heal {
- lvl 10
  hp < 90%
  sp > 0%
 }
@@ -510,7 +503,6 @@ partySkill Resurrection {
 }
 
 partySkill Heal {
- lvl 10
  sp > 20%
  whenFollowing 1
  target_hp < 89%
@@ -518,7 +510,6 @@ partySkill Heal {
 }
 
 partySkill Blessing {
- lvl 10
  sp > 20%
  inLockOnly 0
  timeout 200
@@ -527,7 +518,6 @@ partySkill Blessing {
 }
 
 partySkill Increase Agility {
- lvl 10
  sp > 10%
  inLockOnly 0
  timeout 200
@@ -536,7 +526,6 @@ partySkill Increase Agility {
 }
 
 partySkill Impositio Manus {
- lvl 5
  sp > 20%
  inLockOnly 0
  target_whenStatusInactive Impositio Manus
@@ -544,7 +533,6 @@ partySkill Impositio Manus {
 }
 
 partySkill Kyrie Eleison {
- lvl 10
  sp > 20%
  inLockOnly 0
  target_whenStatusInactive Kyrie Eleison
@@ -552,7 +540,6 @@ partySkill Kyrie Eleison {
 }
 
 partySkill Suffragium {
- lvl 10
  sp > 20%
  inLockOnly 0
  target_whenStatusInactive Suffragium
@@ -577,7 +564,6 @@ partySkill Status Recovery {
 ## custom end
 
 attackSkillSlot {
-	lvl 10
 	dist 1.5
 	maxCastTime 0
 	minCastTime 0
@@ -665,7 +651,6 @@ doCommand {
 }
 
 useSelf_skill {
-	lvl 10
 	maxCastTime 0
 	minCastTime 0
 	hp
@@ -698,7 +683,6 @@ useSelf_skill_smartHeal 1
 partySkillDistance 0..8
 
 partySkill {
-	lvl 10
 	dist 3
 	maxCastTime 0
 	minCastTime 0
@@ -869,7 +853,7 @@ sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
-storageAuto 1
+storageAuto 0
 # storageAuto_npc izlude 134 88
 # storageAuto_npc morroc 156 97
 storageAuto_npc payon 181 104
@@ -889,20 +873,6 @@ minStorageZeny 50
 
 npcTimeResponse
 npcWrongStepsMethod 0
-
-getAuto Fly Wing {
-	minAmount
-	maxAmount 20
-	passive
-	disabled 0
-}
-
-getAuto {
-	minAmount
-	maxAmount
-	passive
-	disabled 0
-}
 
 ######## Debugging options; only useful for developers ########
 

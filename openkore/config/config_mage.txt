@@ -66,8 +66,8 @@ attackAuto_followTarget 1
 attackAuto_inLockOnly 1
 attackAuto_notInTown 1
 attackDistance 1.5
-attackDistanceAuto 0
-attackMaxDistance 2.5
+attackDistanceAuto 1
+attackMaxDistance 10
 attackMaxRouteDistance 100
 attackMaxRouteTime 4
 attackMinPlayerDistance 2
@@ -444,7 +444,6 @@ pet_return 20
 
 ## custom
 attackSkillSlot Fire Bolt {
-   lvl 10
    dist 8
    #maxCastTime 0.1
    #minCastTime 0
@@ -457,7 +456,6 @@ attackSkillSlot Fire Bolt {
 }
 
 attackSkillSlot Soul Strike {
-   lvl 10
    dist 8
    #maxCastTime 0.1
    #minCastTime 0
@@ -470,7 +468,6 @@ attackSkillSlot Soul Strike {
 }
 
 attackSkillSlot Cold Bolt {
-   lvl 10
    dist 8
    #maxCastTime 0.1
    #minCastTime 0
@@ -483,7 +480,6 @@ attackSkillSlot Cold Bolt {
 }
 
 attackSkillSlot Lightning Bolt {
-   lvl 10
    dist 8
    #maxCastTime 0.1
    #minCastTime 0
@@ -496,7 +492,6 @@ attackSkillSlot Lightning Bolt {
 }
 
 useSelf_skill Energy Coat {
-   lvl 1
    whenStatusInactive Energy Coat
    stopWhenHit 1
    inLockOnly 0
@@ -523,7 +518,6 @@ attackSkillSlot Sight {
 }
 
 attackSkillSlot Thunderstorm {
-   lvl 10
    #maxCastTime 0.1
    #minCastTime 0
    dist 7
@@ -532,7 +526,6 @@ attackSkillSlot Thunderstorm {
 ## custom end
 
 attackSkillSlot {
-	lvl 10
 	dist 1.5
 	maxCastTime 0
 	minCastTime 0
@@ -620,7 +613,6 @@ doCommand {
 }
 
 useSelf_skill {
-	lvl 10
 	maxCastTime 0
 	minCastTime 0
 	hp
@@ -653,7 +645,6 @@ useSelf_skill_smartHeal 1
 partySkillDistance 0..8
 
 partySkill {
-	lvl 10
 	dist 3
 	maxCastTime 0
 	minCastTime 0
@@ -825,7 +816,7 @@ sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
-storageAuto 1
+storageAuto 0
 # storageAuto_npc izlude 134 88
 # storageAuto_npc morroc 156 97
 storageAuto_npc payon 181 104
@@ -845,20 +836,6 @@ minStorageZeny 50
 
 npcTimeResponse
 npcWrongStepsMethod 0
-
-getAuto Fly Wing {
-	minAmount
-	maxAmount 20
-	passive
-	disabled 0
-}
-
-getAuto {
-	minAmount
-	maxAmount
-	passive
-	disabled 0
-}
 
 ######## Debugging options; only useful for developers ########
 
