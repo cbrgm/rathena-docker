@@ -65,11 +65,13 @@ attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
 attackAuto_inLockOnly 1
 attackAuto_notInTown 1
-attackDistance 1.5
+attackDistance 1
 attackDistanceAuto 0
-attackMaxDistance 2.5
-attackMaxRouteDistance 100
-attackMaxRouteTime 4
+attackMaxDistance 1
+attackMaxRouteDistance 250
+attackMaxRouteTime 250
+attackRouteMaxPathDistance 250
+attackUpdateMonsterPos 1
 attackMinPlayerDistance 2
 attackMinPortalDistance 4
 attackUseWeapon 1
@@ -166,7 +168,7 @@ followTarget
 followEmotion 0
 followEmotion_distance 4
 followFaceDirection 0
-followDistanceMax 6
+followDistanceMax 10
 followDistanceMin 3
 followLostStep 12
 followSitAuto 0
@@ -174,7 +176,7 @@ followBot 0
 followRandom 0
 followRandomDistance 4
 
-itemsTakeAuto 2
+itemsTakeAuto 1
 itemsTakeAuto_party 0
 itemsGatherAuto 2
 itemsMaxWeight 89
@@ -357,7 +359,7 @@ mercenary_attackAuto 2
 mercenary_attackAuto_party 1
 mercenary_attackAuto_notInTown 1
 mercenary_attackAuto_onlyWhenSafe 0
-mercenary_attackDistance 1.5
+mercenary_attackDistance 1
 mercenary_attackMaxDistance 2.5
 mercenary_attackMaxRouteTime 4
 mercenary_attackCanSnipe 0

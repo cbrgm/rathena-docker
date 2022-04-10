@@ -63,20 +63,24 @@ attackAuto 2
 attackAuto_party 1
 attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
-attackAuto_inLockOnly 1
+attackAuto_inLockOnly 0
 attackAuto_notInTown 1
 attackDistance 1.5
-attackDistanceAuto 1
+attackDistanceAuto 0
 attackMaxDistance 10
+attackMaxRouteDistance 250
+attackMaxRouteTime 250
+attackRouteMaxPathDistance 250
+attackUpdateMonsterPos 1
 attackMaxRouteDistance 100
 attackMaxRouteTime 4
 attackMinPlayerDistance 2
 attackMinPortalDistance 4
-attackUseWeapon 1
+attackUseWeapon 0
 attackNoGiveup 0
 attackCanSnipe 0
 attackCheckLOS 0
-attackLooters 0
+attackLooters 1
 attackChangeTarget 1
 aggressiveAntiKS 0
 
@@ -166,7 +170,7 @@ followTarget
 followEmotion 0
 followEmotion_distance 4
 followFaceDirection 0
-followDistanceMax 6
+followDistanceMax 10
 followDistanceMin 3
 followLostStep 12
 followSitAuto 0
@@ -444,50 +448,49 @@ pet_return 20
 
 ## custom
 attackSkillSlot Fire Bolt {
-   dist 8
+   dist 4
    #maxCastTime 0.1
    #minCastTime 0
    sp > 10
    stopWhenHit 1
-   inLockOnly 1
+   inLockOnly 0
    notInTown 1
-   #monsters
+   monsters
    #maxUses
 }
 
 attackSkillSlot Soul Strike {
-   dist 8
+   dist 4
    #maxCastTime 0.1
    #minCastTime 0
    sp > 10
    stopWhenHit 1
-   inLockOnly 1
+   inLockOnly 0
    notInTown 1
-   #monsters
+   monsters
    #maxUses
 }
 
 attackSkillSlot Cold Bolt {
-   dist 8
+   dist 4
    #maxCastTime 0.1
    #minCastTime 0
    sp > 10
    stopWhenHit 1
-   inLockOnly 1
    notInTown 1
-   #monsters
+   monsters
    #maxUses
 }
 
 attackSkillSlot Lightning Bolt {
-   dist 8
+   dist 4
    #maxCastTime 0.1
    #minCastTime 0
    sp > 10
    stopWhenHit 1
-   inLockOnly 1
+   inLockOnly 0
    notInTown 1
-   #monsters
+   monsters
    #maxUses
 }
 
