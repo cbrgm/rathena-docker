@@ -59,11 +59,11 @@ alias_heal sp 28
 allowedMaps
 allowedMaps_reaction 1
 
-attackAuto 2
+attackAuto 1
 attackAuto_party 1
 attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
-attackAuto_inLockOnly 1
+attackAuto_inLockOnly 0
 attackAuto_notInTown 1
 attackDistance 1
 attackDistanceAuto 0
@@ -448,7 +448,7 @@ attackSkillSlot Bash {
    dist 1.5
    sp > 10
    aggressives
-   inLockOnly 1
+   inLockOnly 0
    timeout 5
    monsters
    maxAttempts
@@ -459,7 +459,7 @@ useSelf_skill Magnum Break {
     dist 1.5
     sp > 30%
     aggressives >= 3
-    inLockOnly 1
+    inLockOnly 0
     notInTown 1
 }
 
@@ -467,7 +467,7 @@ useSelf_skill Endure {
    sp > 10%
    whenStatusInactive Endure
         onAction attack
-   inLockOnly 1
+   inLockOnly 0
    notWhileSitting 1
 }
 
@@ -475,7 +475,7 @@ attackSkillSlot Provoke{
    sp >10
    monsters
    maxUses 1
-   inLockOnly 1
+   inLockOnly 0
    timeout 10
 }
 ## custom end
